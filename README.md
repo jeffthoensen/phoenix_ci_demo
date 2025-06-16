@@ -1,18 +1,23 @@
-# PhoenixCiDemo
+# Phoenix CI Demo
+![CI](https://github.com/jeff-thoensen/phoenix_ci_demo/actions/workflows/ci.yml/badge.svg)
 
-To start your Phoenix server:
+This is a stripped-down Phoenix project set up to run tests automatically on every commit. There's no database or front-end, just testable code and a working GitHub Actions workflow.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## What's here
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- Simple Phoenix setup with the defaults trimmed out
+- A fake function (`activate_user`) to simulate a real-world logic path
+- Two tests that check for different user states (inactive and already active)
+- GitHub Actions config that runs `mix test` on push or pull request
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Run it locally
 
-## Learn more
+```bash
+mix deps.get
+mix test
+```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## Why this exists
+
+To show how I would approach testing in a Phoenix environment, making sure the right things are tested and the tests always run.
+
