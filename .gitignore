@@ -25,3 +25,12 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 phoenix_ci_demo-*.tar
 
+
+# secrets and keys: never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
